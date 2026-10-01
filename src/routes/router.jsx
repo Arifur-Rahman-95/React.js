@@ -7,17 +7,24 @@ import Contact from "../pages/Contact";
 import Product from "../pages/Product";
 import Checkout from "../pages/Checkout";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
     {
-        path: "/", element: <App/>, children:[
-            {index:true,element: <Home/>},
-            {path:'about',element: <About/>},
-            {path:'blog',element: <Blog/>},
-            {path:'contact',element: <Contact/>},
-            {path:'Product',element: <Product/>},
-             {path:'checkout',element: <Checkout/>},
-            
-        ],
+      path: "/",
+      element: <App />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "blog", element: <Blog /> },
+        { path: "contact", element: <Contact /> },
+        { path: "Product", element: <Product /> },
+        { path: "checkout", element: <Checkout /> },
+      ],
     },
-]);
+  ],
+  {
+    basename: "/React.js",
+  }
+);
+
 export default router;
